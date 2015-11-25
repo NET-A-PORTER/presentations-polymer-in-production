@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/demo/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/demo/css/flexboxgrid.css">
+	<link rel="import" href="/components/polymer/polymer.html">
+	<link rel="import" href="/components/pages/demo.html">
+  	<script src="/demo/js/stubs.js"></script>
+	<style>
+		nap-product {
+			width: 300px;
+		}
+	</style>
+</head>
+<body>
+	<nap-product product='{
+	"name": "Oversized leather bomber jacket",
+	"price": {
+		"discountPercent": 60,
+		"divisor": 100,
+		"gross": 143200,
+		"currency": "GBP",
+		"original": {
+            "gross": 358000
+        }
+	},
+	"onSale": false,
+	"brand": {
+		"id": 128,
+		"name": "Marni",
+		"urlKey": "Marni"
+	},
+	"id": 540978
+}' itemscope itemtype="http://schema.org/Product"></nap-product>
+</body>
+</html>

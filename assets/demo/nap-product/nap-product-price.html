@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/demo/css/reset.css">
+	<link rel="import" href="/components/polymer/polymer.html">
+    <link rel="import" href="/components/pages/demo.html">
+  	<script src="/demo/js/stubs.js"></script>
+    <style>
+        body {
+            text-align: center;
+        }
+        span {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+	<nap-product-price price='{
+        "currency":"GBP",
+        "divisor":100,
+        "gross":15500
+    }'><link itemprop="availability" href="http://schema.org/OutOfStock"></nap-product-price>
+</body>
+</html>

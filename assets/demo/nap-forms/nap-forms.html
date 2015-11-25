@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="/demo/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="/demo/css/flexboxgrid.css">
+		<link rel="stylesheet" type="text/css" href="/demo/css/icon-sprite-png.css">
+		<link rel="import" href="/components/polymer/polymer.html">
+	    <link rel="import" href="/components/pages/demo.html">
+	  	<script src="/demo/js/stubs.js"></script>
+	</head>
+	<body class="no-svg grouped-form" style="max-width: 500px; margin: 0 auto;">
+		<input-email id="primaryEmail" label="Email address*" error="Not Valid Email Address" required class="first-form-element" style="margin-top: 0;"></input-email>
+		<input-email label="Confirm email address*" error="Email Address Does Not Match" linked="primaryEmail" required></input-email>
+		<input-text name="firstname" label="First Name*" type="text" error="Not Valid" required></input-text>
+		<input-text name="surname" label="Surname" type="text" error="Not Valid"></input-text>
+		<input-text name="password" label="Password*" type="password" error="Not Valid" required></input-text>
+		<input-telephone name="telephone" label="Telephone Number*" error="Not Valid" required></input-telephone>
+		<select-country name="country" label="Country*" class="last-form-element" required></select-country>
+	</body>
+</html>

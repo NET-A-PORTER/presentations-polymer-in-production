@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="no-svg">
+	<head>
+		<meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/demo/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="/demo/css/buttons.css">
+        <link rel="stylesheet" type="text/css" href="/demo/css/flexboxgrid.css">
+        <link rel="stylesheet" type="text/css" href="/demo/css/icon-sprite-png.css">
+        <link rel="import" href="/components/polymer/polymer.html">
+        <link rel="import" href="/components/pages/demo.html">
+        <script src="/demo/js/stubs.js"></script>
+		<style type="text/css">
+			nap-wishlist-button {
+				width: 222px;
+			}
+		</style>
+	</head>
+	<body>
+	<nap-wishlist-button wishlists='[
+        {
+            "@id":"/api/wishlists/53904dcce4b0458ffabd5c30",
+            "@type":"/api/schemas/wishlist",
+            "id":"53904dcce4b0458ffabd5c30",
+            "owner":"urn:nap:account:233b3d1a-85b8-11e2-9f14-b4b52f51d098",
+            "name":"Wish List",
+            "shared":true,
+            "createdAt":"2013-05-14T15:58:53.000Z",
+            "role":"owner",
+            "permissions":{
+                "rename":false,
+                "delete":false,
+                "share":true
+            }
+        },
+        {
+            "@id":"/api/wishlists/543598a6e4b073f7cd8bef56",
+            "@type":"/api/schemas/wishlist",
+            "id":"543598a6e4b073f7cd8bef56",
+            "owner":"urn:nap:account:233b3d1a-85b8-11e2-9f14-b4b52f51d098",
+            "name":"Sport",
+            "shared":false,
+            "createdAt":"2014-10-08T20:03:51.000Z",
+            "role":"owner",
+            "permissions":{
+                "rename":true,
+                "delete":true,
+                "share":true
+            }
+        },
+        {
+            "@id":"/api/wishlists/543598a6e4b073f7cd8bef56",
+            "@type":"/api/schemas/wishlist",
+            "id":"543598a6e4b073f7cd8bef56",
+            "owner":"urn:nap:account:233b3d1a-85b8-11e2-9f14-b4b52f51d098",
+            "name":"Holiday",
+            "shared":false,
+            "createdAt":"2014-10-08T20:03:51.000Z",
+            "role":"owner",
+            "permissions":{
+                "rename":true,
+                "delete":true,
+                "share":true
+            }
+        }
+    ]'></nap-wishlist-button>
+    <script>
+        document.querySelector('nap-wishlist-button').sku = {
+            id: '123456-005',
+            size: 'big'
+        };
+    </script>
+	</body>
+</html>

@@ -1,0 +1,485 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` sprite -->
+<img class="icon-home" />
+```
+*/
+.no-svg .Logo-NAP_5S {
+  background-image: url(images/icon-sprite.png);
+  background-position: -200px -58px;
+  width: 123px;
+  height: 10px;
+}
+.no-svg .Logo-NAP_Normal {
+  background-image: url(images/icon-sprite.png);
+  background-position: -100px 0px;
+  width: 294px;
+  height: 18px;
+}
+.no-svg .icon-arrow_down-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -250px -126px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-arrow_down {
+  background-image: url(images/icon-sprite.png);
+  background-position: -50px -126px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-arrow_left-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -75px -126px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-arrow_left {
+  background-image: url(images/icon-sprite.png);
+  background-position: -100px -126px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-arrow_right-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -125px -126px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-arrow_right {
+  background-image: url(images/icon-sprite.png);
+  background-position: -150px -126px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-arrow_up-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -175px -126px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-arrow_up {
+  background-image: url(images/icon-sprite.png);
+  background-position: -200px -126px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-carousel_arrow-left {
+  background-image: url(images/icon-sprite.png);
+  background-position: -150px -18px;
+  width: 50px;
+  height: 50px;
+}
+.no-svg .icon-carousel_arrow-right {
+  background-image: url(images/icon-sprite.png);
+  background-position: -100px -18px;
+  width: 50px;
+  height: 50px;
+}
+.no-svg .icon-cross_black {
+  background-image: url(images/icon-sprite.png);
+  background-position: -275px -126px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-cross_grey {
+  background-image: url(images/icon-sprite.png);
+  background-position: -300px -126px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-cross_red {
+  background-image: url(images/icon-sprite.png);
+  background-position: -325px -126px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-cross_white {
+  background-image: url(images/icon-sprite.png);
+  background-position: -350px -126px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-information {
+  background-image: url(images/icon-sprite.png);
+  background-position: 0px -151px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-language {
+  background-image: url(images/icon-sprite.png);
+  background-position: -25px -151px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-lock {
+  background-image: url(images/icon-sprite.png);
+  background-position: -50px -151px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-menu_burger {
+  background-image: url(images/icon-sprite.png);
+  background-position: -75px -151px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-menu_close {
+  background-image: url(images/icon-sprite.png);
+  background-position: -100px -151px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-minus-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -125px -151px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-minus {
+  background-image: url(images/icon-sprite.png);
+  background-position: -150px -151px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-nap_live-wl {
+  background-image: url(images/icon-sprite.png);
+  background-position: -175px -151px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-plus-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -200px -151px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-plus {
+  background-image: url(images/icon-sprite.png);
+  background-position: -225px -151px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-search-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -250px -151px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-search {
+  background-image: url(images/icon-sprite.png);
+  background-position: -275px -151px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-search_clear-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -300px -151px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-search_clear {
+  background-image: url(images/icon-sprite.png);
+  background-position: -325px -151px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-shoppingbag_empty-active-rollover {
+  background-image: url(images/icon-sprite.png);
+  background-position: -25px -176px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-shoppingbag_empty-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -50px -176px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-shoppingbag_empty-rollover {
+  background-image: url(images/icon-sprite.png);
+  background-position: -75px -176px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-shoppingbag_empty {
+  background-image: url(images/icon-sprite.png);
+  background-position: -286px -100px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-shoppingbag_item-active-rollover {
+  background-image: url(images/icon-sprite.png);
+  background-position: -311px -100px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-shoppingbag_item-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -336px -100px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-shoppingbag_item-added {
+  background-image: url(images/icon-sprite.png);
+  background-position: -361px -100px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-shoppingbag_item-rollover {
+  background-image: url(images/icon-sprite.png);
+  background-position: 0px -126px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-shoppingbag_item {
+  background-image: url(images/icon-sprite.png);
+  background-position: -25px -126px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-size_guide {
+  background-image: url(images/icon-sprite.png);
+  background-position: -275px -176px;
+  width: 24px;
+  height: 25px;
+}
+.no-svg .icon-social_facebook-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -234px -100px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_facebook-hover {
+  background-image: url(images/icon-sprite.png);
+  background-position: -208px -100px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_facebook {
+  background-image: url(images/icon-sprite.png);
+  background-position: -230px -68px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_google-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -306px -18px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_google-hover {
+  background-image: url(images/icon-sprite.png);
+  background-position: -334px -68px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_google {
+  background-image: url(images/icon-sprite.png);
+  background-position: -332px -18px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_instagram-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -358px -18px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_instagram-hover {
+  background-image: url(images/icon-sprite.png);
+  background-position: -100px -68px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_instagram {
+  background-image: url(images/icon-sprite.png);
+  background-position: -126px -68px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_pinterest-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -152px -68px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_pinterest {
+  background-image: url(images/icon-sprite.png);
+  background-position: -178px -68px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_tumblr-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -204px -68px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_tumblr-hover {
+  background-image: url(images/icon-sprite.png);
+  background-position: -260px -100px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_tumblr {
+  background-image: url(images/icon-sprite.png);
+  background-position: -256px -68px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_twitter-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -282px -68px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_twitter-hover {
+  background-image: url(images/icon-sprite.png);
+  background-position: -308px -68px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_twitter {
+  background-image: url(images/icon-sprite.png);
+  background-position: -280px -18px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_wechat-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -360px -68px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_wechat-hover {
+  background-image: url(images/icon-sprite.png);
+  background-position: 0px -100px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_wechat {
+  background-image: url(images/icon-sprite.png);
+  background-position: -26px -100px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_weibo-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -52px -100px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_weibo-hover {
+  background-image: url(images/icon-sprite.png);
+  background-position: -78px -100px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_weibo {
+  background-image: url(images/icon-sprite.png);
+  background-position: -104px -100px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_youtube-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -130px -100px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_youtube-hover {
+  background-image: url(images/icon-sprite.png);
+  background-position: -156px -100px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-social_youtube {
+  background-image: url(images/icon-sprite.png);
+  background-position: -182px -100px;
+  width: 26px;
+  height: 26px;
+}
+.no-svg .icon-tick_black {
+  background-image: url(images/icon-sprite.png);
+  background-position: -350px -151px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-tick_white {
+  background-image: url(images/icon-sprite.png);
+  background-position: 0px -176px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-video_pause {
+  background-image: url(images/icon-sprite.png);
+  background-position: -240px -18px;
+  width: 40px;
+  height: 40px;
+}
+.no-svg .icon-video_play-mobile {
+  background-image: url(images/icon-sprite.png);
+  background-position: 0px 0px;
+  width: 100px;
+  height: 100px;
+}
+.no-svg .icon-video_play {
+  background-image: url(images/icon-sprite.png);
+  background-position: -200px -18px;
+  width: 40px;
+  height: 40px;
+}
+.no-svg .icon-wishlist_empty-active-rollover {
+  background-image: url(images/icon-sprite.png);
+  background-position: -100px -176px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-wishlist_empty-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -125px -176px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-wishlist_empty-rollover {
+  background-image: url(images/icon-sprite.png);
+  background-position: -150px -176px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-wishlist_empty {
+  background-image: url(images/icon-sprite.png);
+  background-position: -175px -176px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-wishlist_item-active-rollover {
+  background-image: url(images/icon-sprite.png);
+  background-position: -200px -176px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-wishlist_item-active {
+  background-image: url(images/icon-sprite.png);
+  background-position: -225px -176px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-wishlist_item-rollover {
+  background-image: url(images/icon-sprite.png);
+  background-position: -250px -176px;
+  width: 25px;
+  height: 25px;
+}
+.no-svg .icon-wishlist_item {
+  background-image: url(images/icon-sprite.png);
+  background-position: -225px -126px;
+  width: 25px;
+  height: 25px;
+}

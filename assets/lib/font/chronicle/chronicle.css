@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Chronicle';
+    src: url('Chronicle-FineRoman.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chronicle';
+    src: url('Chronicle-FineItalic.otf') format("opentype");
+    font-weight: normal;
+    font-style: italic;
+}

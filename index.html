@@ -1,0 +1,1163 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Polymer In Production</title>
+
+		<meta name="description" content="Slide deck for Web Components Meetup Talk">
+		<meta name="author" content="Matt and Robin">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="/css/reveal.css">
+		<link rel="stylesheet" href="/css/theme/nap.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="/lib/css/zenburn.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+            	<!-- MATT START -->
+
+                <!-- Title -->
+				<section>
+					<h1>polymer in production</h1>
+				</section>
+
+                <!-- Who are we? -->
+                <section class="profile" data-background="#e80042">
+                    <div class="mugshot">
+                        <img src="/images/furniture/matt.jpeg">
+                        <h3>Matt Green</h3>
+                        <a class="handle" href="https://twitter.com/mjgreen145">@mjgreen145</a>
+                    </div>
+                    <div class="mugshot">
+                        <img src="/images/furniture/robin.jpeg">
+                        <h3>Robin Glen</h3>
+                        <a class="handle" href="https://twitter.com/arielwithlegs">@arielwithlegs</a>
+                    </div>
+                    <div class="mugshot">
+                        <img src="/images/furniture/dbod.png">
+                        <h3>David Boddy</h3>
+                        <a class="handle" href="https://twitter.com/threetwotwo">@threetwotwo</a>
+                    </div>
+                </section>
+
+                <!-- Who is NAP -->
+                <section>
+                    <div>
+                        <img src="/images/furniture/net-a-porter.svg" width="70%">
+                    </div>
+                    <aside class="notes">
+                        <ul>
+                            <li>Just going to give a short foreward</li>
+                            <li>for us at NAP the precursor to working with polymer is creating a culture of component level thinking</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <!-- MATT END -->
+
+                <!-- DAVID START -->
+
+                <!-- Collaboration -->
+                <section>
+                    <h1>collaboration</h1>
+                    <aside class="notes">
+                        <ul>
+                            <li>At NAP this started with a move to form cross-compentency teams</li>
+                            <li>Creating small, focused product teams</li>
+                            <li>Teams made of a product owner / engineers / testers and experience designers</li>
+                        </ul>
+                    </aside>
+                </section>
+
+
+                <!-- Empathy -->
+                <section>
+                    <h1>empathy</h1>
+                    <aside class="notes">
+                        <ul>
+                            <li>For me this is one of the most crucial points</li>
+                            <li>As it builds empathy between team members</li>
+                            <li>And as that empathy Establishes itself it grows a culture of listening and learning within the team - self development if you will</li>
+                            <li>Making our teams able to pivot and accelerate through change by making smarter decisions</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <!-- Challenge -->
+                <section>
+                    <h1>challenging</h1>
+                    <aside class="notes">
+                        <ul>
+                            <li>These smaller teams also promote self-development through conversation</li>
+                            <li>and that is a natural catalyst to challenging existing models</li>
+                            <li>For our team we started to challenge the way we approached showcasing work to our stakeholders</li>
+                            <li>Previously this process was to show full formed pages designs at the end of two week sprints, which tended resulted in</li>
+                            <li>+ subjective commentary + constant rework which was boring and promoted inconsistancy throughout</li>
+                            <li>how many times do you want to design and develop a form field</li>
+                            <li>ultimately began to derail our ability to deliver projects.</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section>
+                    <h1>atomic</h1>
+                    <aside class="notes">
+                        <ul>
+                            <li>to move away from this we focused on taking a step back</li>
+                            <li>and began showcasing elements at a much more granular level</li>
+                            <li>using a methodolgy from the Brad Frost school of design</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <!-- Atomic Design -->
+                <section data-background="#e80042">
+                    <div>
+                        <img src="/images/insight/atomic-ui-01.jpg" >
+                    </div>
+                    <aside class="notes">
+                        <ul>
+                            <li>Atom - an element that can't be broken down anymore - H1</li>
+                            <li>Molecules - a collection of atoms - language select</li>
+                            <li>Organism - a collection of molecules - global header</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <!-- Stylesheet -->
+                <section data-background="#e80042">
+                    <div>
+                        <img src="/images/insight/stylesheet-01.jpg" class="shadow">
+                    </div>
+                    <aside class="notes">
+                        <ul>
+                            <li>Our showcase materials loo like this now - a visual stylesheet</li>
+                            <li>An incredible useful way of approaching our design</li>
+                            <li>it meant the team, and all stakeholders are invested to thinking abouts elements at an individual component level.</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <!-- DAVID END -->
+
+                <!-- MATT START -->
+
+                <!-- Pivot -->
+                <section>
+                    <h1>the turning point</h1>
+                    <aside class="notes">
+	                    <ul>
+	                    	<li>Attended Google I/O - heard about Polymer 1.0</li>
+	                	</ul>
+                    </aside>
+                </section>
+
+                <!-- Pivot -->
+                <section data-background="#e80042">
+                    <div>
+                        <img src="/images/pivot/polymer1.0.png" style="width:270px">
+                    </div>
+                    <aside class="notes">
+	                    <ul>
+	                    	<li>Attended Google I/O - heard about Polymer 1.0</li>
+	                    	<li>Tried a basic component - easy to get started</li>
+	                    	<li>But was this going to work in production? </li>
+	                	</ul>
+                    </aside>
+                </section>
+
+                <!-- Browser Support -->
+                <section data-background="#e80042">
+                    <img src="/images/pivot/browser-support.png" class="shadow" />
+                    <aside class="notes">
+	                    <ul>
+	                    	<li>Browser support currently poor</li>
+	                    	<li>Image = aggrgation of all 4 standards needed for Web Components</li>
+	                    	<li>Chrome fine, Firefox and Edge getting there. IE never, Safari??</li>
+	                	</ul>
+                    </aside>
+                </section>
+
+                <!-- Risk vs Reward -->
+                <section>
+                    <h1>risk vs reward</h1>
+                    <aside class="notes">
+                    	<ul>
+	                    	<li>W3 Standard - soon no Polyfill needed</li>
+	                    	<li>Not a framework - can pick and choose when you want to use it.</li>
+	                    	<li>Feels like Web dev, no framework in the way</li>
+	                    	<li>Speed to development high.</li>
+	                	</ul>
+                    </aside>
+                </section>
+
+                <section data-background="#e80042">
+                    <img src="/images/furniture/time-to-deliver-01.jpg" />
+                    <aside class="notes">
+                        <ul>
+                            <li>Normal project - devlivery speeds up slightly as you become familiar</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section data-background="#e80042">
+                    <img src="/images/furniture/time-to-deliver-02.jpg" />
+                    <aside class="notes">
+                        <ul>
+                            <li>With components - more up-front investment, longer-term gain</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <!-- MATT END -->
+
+                <!-- ROBIN START -->
+
+                <!-- Our Components -->
+                <section>
+                    <h1>components</h1>
+                </section>
+
+				<!-- NAP Product Price -->
+				<section data-background="#ffffff">
+					<div style="width: 50%; float: left;">
+					<iframe height="50" width="100%" src="/demo/nap-product/nap-product-price.html" scrolling="no"></iframe>
+					<pre style="margin: 0; width: 100%;"><code class="html" data-trim>
+&lt;nap-product-price price='{
+    "currency":"GBP",
+    "divisor":100,
+    "gross":15500
+}'&gt;
+&lt;/nap-product-price&gt;
+					</code></pre></div>
+					<div style="width: 50%; float: right;">
+					<iframe height="50" width="100%" src="/demo/nap-product/nap-product-price-sale.html" scrolling="no"></iframe>
+					<pre style="margin: 0; width: 100%;"><code class="html" data-trim>
+&lt;nap-product-price price='{
+    "discountPercent": 30,
+    "divisor": 100,
+    "duty": 0,
+    "tax": 2625,
+    "gross": 15750,
+    "net": 13125,
+    "currency": "GBP",
+    "original": {
+        "net": 18750,
+        "gross": 22500,
+        "tax": 3750,
+        "duty": 0
+    }'&gt;
+&lt;/nap-product-price&gt;
+					</code></pre></div>
+					<aside class="notes">
+						<ul>
+							<li>Pass object as string into attribute, this can be done via
+								<ul>
+									<li>Written into mark up</li>
+									<li>Passed to JS as object</li>
+								</ul>
+							</li>
+							<li>Smallest reuseable component</li>
+							<li>Why?
+								<ul>
+									<li>Completely self contained</li>
+									<li>Boring and saves dev time</li>
+								</ul>
+							</li>
+						</ul>
+					</aside>
+				</section>          
+
+
+                <!-- NAP Product -->
+                <section data-background="#ffffff">
+                    <div style="width: 50%; float: left;">
+                    <iframe height="550" src="/demo/nap-product/nap-product.html" scrolling="no"></iframe>
+                    </div>
+                    <div style="width: 50%; float: right;">
+                    <pre style="margin: 0; width: 100%;"><code class="html" data-trim>
+&lt;nap-product product='{
+    "name": "Oversized leather bomber jacket",
+    "price": {
+        "discountPercent": 60,
+        "divisor": 100,
+        "gross": 143200,
+        "currency": "GBP",
+        "original": {
+            "gross": 358000
+        }
+    },
+    "onSale": false,
+    "brand": {
+        "id": 128,
+        "name": "Marni",
+        "urlKey": "Marni"
+    },
+    "id": 540978
+}'&gt;&lt;/nap-product&gt;
+                    </code></pre></div>
+                    <aside class="notes">
+						<ul>
+							<li>Includes nap-price component</li>
+							<li>Has interactions included, show rollover</li>
+							<li>Includes meta data about image</a>
+							<li>Show mark up
+								<ul>
+									<li>All that is in shadow dom, or in this case, shadydom as polyfiled</li>
+								</ul>
+							</li>
+						</ul>
+					</aside>
+                </section>
+
+                <!-- NAP Product Price -->
+                <section data-background="#eeeeee">
+                    <img height="600" src="/images/components-demo/product-price-02.jpg">
+                    <aside class="notes">
+                        <ul>
+                            <li>All that is in shadow dom, or in this case, shadydom as polyfiled</li>
+                            <li>Conditions inside templates</li>
+                            <li>Schema tags built into component, more later</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <!-- These are more complex using libs -->
+
+				<!-- Upsell module -->
+				<section data-background="#ffffff">
+					<iframe height="350" width="100%" src="/demo/upsell-modules/nap-product-upsell.html" scrolling="no"></iframe>
+					<pre style="margin: 0; width: 100%;"><code class="html" data-trim>
+&lt;nap-product-upsell pids='[508770, 543952, 540978, 538739, 538736, 538734]'&gt;
+&lt;/nap-product-upsell&gt;
+					</code></pre>
+                    <aside class="notes">
+                        <ul>
+                            <li>Complex collection</li>
+                            <li>Just pids no product data, how do we get that?</li>
+                            <li>Polymer elements - matt will talk about</li>
+                        </ul>
+                    </aside>
+				</section>
+
+				<!-- ROBIN END -->
+
+                <!-- MATT START -->
+
+                <!-- HTWI module -->
+                <section data-background="#ffffff">
+                    <iframe height="1000" width="100%" src="/demo/upsell-modules/nap-htwi-module.html" style="margin-top: -70px;" scrolling="no"></iframe>
+                    <aside class="notes">
+                    	<ul>
+                    		<li>Build up richer modules from smaller components</li>
+                		</ul>
+                    </aside>
+                </section>
+
+                <!-- HTWI module code -->
+                <section data-background="#ffffff">
+                    <pre style="margin: 0; width: 100%;"><code class="html" data-trim>
+&lt;nap-htwi-module pid="597093" heading="How to wear it"&gt;&lt;/nap-htwi-module&gt;
+                    </code></pre>
+                    <img src="/images/components-demo/htwi_network.png" style="border: none; margin-top: 50px;"/>
+                    <aside class="notes">
+                    	<ul>
+                    		<li>Uses iron-ajax to make API calls for data</li>
+                    		<li>Automatically bind the data to the markup in the template</li>
+                    		<li>Element knows how to deal with failed AJAX calls</li>
+                		</ul>
+                    </aside>
+                </section>
+
+                <!-- NAP Live -->
+				<section data-background="#ffffff">
+					<iframe height="350" width="100%" src="/demo/nap-live/nap-live.html" scrolling="no"></iframe>
+					<pre style="margin: 0; width: 100%;"><code class="html" data-trim>
+&lt;nap-live&gt;&lt;/nap-live&gt;
+					</code></pre>
+                    <aside class="notes">
+                        <ul>
+                            <li>Real activity</li>
+                        </ul>
+                    </aside>
+				</section>
+
+                <!-- NAP Forms -->
+				<section data-background="#ffffff">
+					<iframe height="400" width="100%" src="/demo/nap-forms/nap-forms.html" scrolling="no"></iframe>
+					<pre style="margin: 0; width: 100%;"><code class="html" data-trim>
+&lt;input-email id="primaryEmail" label="Email address*" error="Not Valid Email Address" required&gt;&lt;/input-email&gt;
+&lt;input-email label="Confirm email address*" error="Email Address Does Not Match" linked="primaryEmail" required&gt;&lt;/input-email&gt;
+&lt;input-text name="firstname" label="First Name*" type="text" error="Not Valid" required&gt;&lt;/input-text&gt;
+&lt;input-text name="surname" label="Surname" type="text" error="Not Valid"&gt;&lt;/input-text&gt;
+&lt;input-text name="password" label="Password*" type="password" error="Not Valid" required&gt;&lt;/input-text&gt;
+&lt;input-telephone name="telephone" label="Telephone Number*" error="Not Valid" required&gt;&lt;/input-telephone&gt;
+&lt;select-country name="country" label="Country*" required&gt;&lt;/select-country&gt;
+					</code></pre>
+					<aside class="notes">
+						<ul>
+							<li> Form library - uses form behaviour</li>
+							<li> Country dropdown - ajax, centralised country data.</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-background="#ffffff">
+					<iframe height="350" width="23%" src="/demo/nap-widgets/nap-wishlist-button.html" scrolling="no"></iframe>
+					<pre style="margin: 0; width: 100%;"><code class="html" data-trim>
+&lt;nap-wishlist-button wishlists='[...]'&gt;&lt;/nap-wishlist-button&gt;
+					</code></pre>
+					<aside class="notes">
+						<ul>
+							<li>For a new wishlist, use "New List"</li>
+							<li>Button provides full wrapper around Wishlist API</li>
+							<li>Also provides a nice feedback loop</li>
+						</ul>
+					</aside>
+				</section>
+
+                <!-- Testing -->
+                <section>
+                    <h1>testing</h1>
+                    <aside class="notes">
+						<ul>
+							<li>Must write tests!</li>
+							<li>All elements essentially provide an API to interact with</li>
+							<li>Must ensure the API always works.</li>
+						</ul>
+					</aside>
+                </section>
+
+                <section>
+                    <h1>web component tester</h1>
+                    <aside class="notes">
+						<ul>
+							<li>Tool created by the Polymer team</li>
+							<li>All common testing tools built in (Mocha, Sinon, Chai)</li>
+							<li>Write your tests in HTML, put tests in a script tag.</li>
+						</ul>
+					</aside>
+                </section>
+
+                <section>
+                    <h1>&lt;test-fixture&gt;</h1>
+                    <aside class="notes">
+                        <ul>
+                            <li>test-fixture created to make testing even easier</li>
+                            <li>Deals the the issue of state between tests</li>
+                            <li>Provides easy setup and teardown</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section data-background="#eeeeee">
+                    <pre style="margin: 0; width: 100%;"><code class="html" data-trim>
+&lt;test-fixture id="buttonTest"&gt;
+  &lt;template&gt;
+    &lt;nap-wishlist-button&gt;&lt;/nap-wishlist-button&gt;
+  &lt;/template&gt;
+&lt;/test-fixture&gt;
+					</code></pre>
+                    <aside class="notes">
+						<ul>
+							<li>Use test fixture element and put your markup in a template</li>
+						</ul>
+					</aside>
+                </section>
+
+                <section data-background="#eeeeee">
+                    <pre style="margin: 0; width: 100%;"><code class="js" data-trim>
+describe('&lt;nap-wishlist-button&gt;', function () {
+  var button;
+
+  beforeEach(function () {
+    button = fixture('buttonTest');
+  });
+});
+                    </code></pre>
+                    <aside class="notes">
+                        <ul>
+                            <li>Use the fixture function to grab your markup and put it in the DOM</li>
+                            <li>It will be automatically cleaned up in the AfterEach phase</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section data-background="#e80042">
+                    <img src="/images/testing/saucelabs-logo.png" style="width:500px" />
+                    <aside class="notes">
+                        <ul>
+                            <li>We use SauceLabs to carry out automatec cross-browser testing</li>
+                            <li>SauceLabs have over 650 OS/browser/device combinations</li>
+                            <li>Plugin available for WCT to easily configure.</li>
+                            <li>Hook up to a CI job, and you have yourself a pipeline!</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <!-- MATT END -->
+
+                <!-- ROBIN START -->
+
+                <!-- Structured Data -->
+                <section>
+                    <h1>structured data</h1>
+                    <aside class="notes">
+                        <ul>
+                            <li>What is structured data</li>
+                            <li>Mark up tags</li>
+                            <li>Identify content types</li>
+                        </ul>
+                    </aside>                                            
+                </section>
+
+                <section data-background="#eeeeee">
+                    <img height="600" src="/images/structured-data/product-shadow-dom.jpg">
+                    <aside class="notes">
+                        <ul>
+                            <li>this is nap product, seen earlier</li>
+                            <li>Show schema tags</li>
+                        </ul>
+                    </aside>                      
+                </section>
+
+                <section data-background="#e80042">
+                    <img src="http://cdn.jsdelivr.net/emojione/assets/png/1F60E.png?v=1.2.4">
+                    <img src="http://cdn.jsdelivr.net/emojione/assets/png/1F615.png?v=1.2.4">
+                    <img src="http://cdn.jsdelivr.net/emojione/assets/png/1F62A.png?v=1.2.4">
+                    <img src="http://cdn.jsdelivr.net/emojione/assets/png/1F60C.png?v=1.2.4">
+                    <img src="http://cdn.jsdelivr.net/emojione/assets/png/1F600.png?v=1.2.4">
+                    <aside class="notes">
+                        <ul>
+                            <li>Difficult journey</li>
+                            <li>Firewall around search team (how it works)</li>
+                            <li>Tooling not ready</li>
+                        </ul>
+                    </aside>                    
+                </section>
+
+                <section data-background="#e80042">
+                    <img src="http://cdn.jsdelivr.net/emojione/assets/png/1F60E.png?v=1.2.4">
+                    <aside class="notes">
+                        <ul>
+                            <li>polymer perfect for components, do once, everyone gets it</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section>
+                    <video controls>
+                      <source src="/videos/structured-data/polymer-summit.mp4" type="video/mp4">
+                    </video>
+                    <aside class="notes">
+                        <ul>
+                            <li>Polymer summit</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section data-background="#e80042">
+                   <img src="http://cdn.jsdelivr.net/emojione/assets/png/1F615.png?v=1.2.4">
+                </section>
+
+                <section data-background="#e80042">
+                    <img height="150" src="/images/structured-data/errors.png" class="shadow">
+                    <aside class="notes">
+                        <ul>
+                            <li>Google webmaster tools tells us there are errors</li>
+                        </ul>
+                    </aside>                      
+                </section>
+
+                <section data-background="#e80042">
+                    <img height="400" src="/images/structured-data/test-live-data.png" class="shadow">
+                    <aside class="notes">
+                        <ul>
+                            <li>Ok test live data</li>
+                        </ul>
+                    </aside>                      
+                </section>
+
+                <section data-background="#e80042">
+                    <img height="439" src="/images/structured-data/structured-data-url-592505.png" class="shadow">
+                    <aside class="notes">
+                        <ul>
+                            <li>Run the tests from web master tools on url</li>
+                            <li>Error</li>
+                            <li>Confused should just work</li>
+                        </ul>
+                    </aside>                      
+                </section>
+
+
+                <section data-background="#e80042">
+                    <img height="439" src="/images/structured-data/structured-data-body-592505.png" class="shadow">
+                    <aside class="notes">
+                        <ul>
+                            <li>Copy body from dev tools</li>
+                            <li>all good</li>
+                        </ul>
+                    </aside>                      
+                </section>
+
+                <section>
+                    <h1>why?</h1>
+                </section>
+
+                <section data-background="#e80042">
+                    <img src="http://cdn.jsdelivr.net/emojione/assets/png/1F62A.png?v=1.2.4">
+                    <aside class="notes">
+                        <ul>
+                            <li>Structered data tool understands rendered components (body)</li>
+                            <li>Structured data tool doesn't render polymer components (url)</li>
+                            <li>Polyfill was not rendering components in time for google bot</li>
+                            <li>Google search needs to index pages, can take days, very long feedback loop</li>
+                        </ul>
+                    </aside>                                                                 
+                </section>
+
+                <section>
+                    <h1>call in the big guns</h1>
+                </section>
+
+                <section data-background="#e80042">
+                    <img src="http://cdn.jsdelivr.net/emojione/assets/png/1F60C.png?v=1.2.4">
+                    <br>
+                    <img height="150" src="/images/structured-data/email.png" class="shadow">
+                    <aside class="notes">
+                        <ul>
+                            <li>updates to webcomponentsjs</li>
+                            <li>Polymer team were amazing</li>
+                        </ul>
+                    </aside>                                                                 
+                </section>
+
+                <section data-background="#e80042">
+                    <img src="http://cdn.jsdelivr.net/emojione/assets/png/1F600.png?v=1.2.4">
+                </section>
+
+                <section data-background="#e80042">
+                    <img height="240" src="/images/structured-data/graph.png" class="shadow">
+                    <aside class="notes">
+                        <ul>
+                            <li>Errors started to drop</li>
+                            <li>Pages with structured data increased</li>
+                        </ul>
+                    </aside>                                                                 
+                </section>
+
+                <section data-background="#e80042">
+                    <img src="http://cdn.jsdelivr.net/emojione/assets/png/1F4A1.png?v=1.2.4">                                                               
+                </section>
+
+                <section data-background="#e80042">
+                    <img height="450" src="/images/structured-data/xhr-structured-data-body-592505.png" class="shadow">
+                    <aside class="notes">
+                        <ul>
+                            <li>Looks like clientside</li>
+                            <li>network tab - yup xhr</li>
+                            <li>Full data object including errors array!</li>
+                            <li>can post from a different domain?</li>
+                        </ul>
+                    </aside>                                                                           
+                </section>
+
+                <section data-background="#e80042">
+                    <img height="350" src="/images/structured-data/postman-check.png" class="shadow">
+                    <aside class="notes">
+                        <ul>
+                            <li>Postman - 200, nice</li>
+                            <li>what can we use this for?</li>
+                        </ul>
+                    </aside>  
+                </section>
+
+                <section>
+                    <h1>hacking seo testing for ci</h1>
+                    <aside class="notes">
+                        <ul>
+                            <li>In CI pipline</li>
+                            <li>Post DOM to structure data tool</li>
+                            <li>Parse results</li>
+                            <li>Each module has SEO testing</li>
+                            <li>Thanks to Adela</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <!-- Build -->
+                <section>
+                    <h1>production-ify</h1>
+                </section>
+
+                <section class="statement">
+                    <p>Inline and package your components</p>
+                    <a href="https://github.com/polymer/vulcanize">vulcanize</a>
+                    <aside class="notes">
+                        <ul>
+                        <li>From google</li>
+                        <li>concat, uglify, minify for HTML imports</li>
+                        <li>Some of it can be made redundant by HTTP2</li>
+                        </ul>
+                    </aside>
+                </section>
+               
+                <section>
+                <!--<p>how can I use it</p>-->
+                    <p>tools to use</p>
+                    <ul>
+                        <li>CLI</li>
+                        <li>JS</li>
+                        <li><a href="http://blog.cozycloud.cc/technic/2014/06/18/task-runners-comparison/">Task Runners</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p>task runners</p>
+                    <ul>
+                        <li><a href="https://www.npmjs.com/package/grunt-vulcanize">Grunt</a></li>
+                        <li><a href="https://www.npmjs.com/package/gulp-vulcanize">Gulp</a></li>
+                        <li><a href="https://www.npmjs.com/package/broccoli-vulcanize">Broccoli</a></li>
+                    </ul>
+                </section> 
+
+                <section>
+                    <!-- <h3>Bundles</h3> -->
+                     <img height="300" src="/images/production-ify/global.png">
+                    <p>components wrapped together</p>
+                    <aside class="notes">
+                        <ul>
+                            <li>Global loaded on all pages</li>
+                        </ul>
+                    </aside>                    
+                </section>
+
+                <section>
+                    <!-- <h3>pages</h3> -->
+                    <img height="180" src="/images/production-ify/product-page.png">
+                    <p>components and bundles for a specfic page</p>
+                    <aside class="notes">
+                        <ul>
+                            <li>Page loaded on specific pages</li>
+                        </ul>
+                    </aside>                    
+                </section> 
+
+                <section data-background="#e80042">
+                    <img height="200" src="/images/furniture/bower-logo.png">
+                    <aside class="notes">
+                        <ul>
+                            <li>Polymer team use Bower so we did the same</li>
+                            <li>Hashmap dist files and cache forever</li>
+                        </ul>
+                    </aside>                                       
+                </section> 
+
+                <section>
+                <p>other production tools</p>
+                    <!-- <h3>other production tools</h3> -->
+                    <ul>
+                    <li><a href="https://github.com/Polymer/hydrolysis">hydrolysis</a></li>
+                    <li><a href="https://github.com/PolymerLabs/crisper">crisper</a></li>
+                    <li><a href="https://github.com/PolymerLabs/polyserve">polyserve</a></li>
+                    <li><a href="https://github.com/PolymerLabs/polylint">polylint</a></li>
+                    <li><a href="https://github.com/PolymerLabs/polydev">polydev</a></li>
+                    </ul>
+                    <aside class="notes">
+                        <ul>
+                            <li>hydrolysis - Static analysis utilities, get api, build docs</li>
+                            <li>crisper - CSP compliance, security</li>
+                            <li>polyserve - serve and demo your components</li>
+                            <li>polylint - lint your polymer components</li>
+                            <li>polydev - dev tools</li>
+                        </ul>
+                    </aside>                                       
+                </section> 
+
+                <!-- ROBIN END -->
+
+                <!-- MATT START -->
+
+                <!-- Monitoring -->
+                <section>
+                    <h1>does it work?</h1>
+                    <aside class="notes">
+                        <ul>
+                            <li>So, it works locally, it passes the tests, does it work in the wild?</li>
+                            <li>More complex than just vanilla web dev</li>
+                            <li>What if something fails to load, fails to render?</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section data-background="#eeeeee">
+                    <pre style="margin: 0; width: 100%;"><code class="hljs" data-trim>
+function checkForWebComponentsOnPage() {
+
+  document.addEventListener('WebComponentsReady', function() {
+    var HTMLImports = document.querySelectorAll('link[rel="import"]');
+    var customElementIds = [];
+    [].forEach.call(HTMLImports, function(HTMLImport) {
+      if(HTMLImport.import) {
+        var domModules = HTMLImport.import.getElementsByTagName('dom-module');
+        [].forEach.call(domModules, function(module) {
+          customElementIds.push(module.id);
+        });
+      }
+    });
+
+    customElementIds.forEach(function(elementName){
+      var elements = document.getElementsByTagName(elementName);
+      [].forEach.call(elements, function(element) {
+        if(element.constructor === HTMLElement){ /* Do stuff */ }
+      });
+    });
+  });
+}
+                    </code></pre>
+                    <aside class="notes">
+                        <ul>
+                            <li>Small bit of code to check for broken elements on a page.</li>
+                            <li>Get all imports</li>
+                            <li>For each one, get all dom-modules and store the id</li>
+                            <li>Essentially getting a list of all the defined elements on the page</li>
+                            <li>Check the constructor. If it hasnt been upgraded by Polymer, it won't have rendered.</li>
+                            <li>We send data to GA for each broken element</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section data-background="#e80042">
+                    <img src="/images/monitoring/broken-element.png" class="shadow" />
+                    <aside class="notes">
+                        <ul>
+                            <li>This does happen sometimes! But not often enough to panic</li>
+                            <li>Still trying to work out the conditions under which this happens, and how to minimise it.</li>
+                            <li>Also send data to GA whenever an element makes an Ajax call which fails</li>
+                            <li>Result is easy-to-spot problems</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <!-- Gotchas -->
+                <section>
+                    <h1>gotchas</h1>
+                    <aside class="notes">
+                        <ul>
+                            <li>Cover a couple of oddities and pitfalls along the way</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section>
+                    <h1>1. docs</h1>
+                    <aside class="notes">
+                        <ul>
+                            <li>Docs in general are very good</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section data-background="#e80042">
+                    <img src="/images/gotchas/docs.png" class="shadow" />
+                    <aside class="notes">
+                        <ul>
+                            <li>Often, go to a docs page looking to find out how to do something</li>
+                            <li>Completely miss "0.5" in the top right corner</li>
+                            <li>No compatability between 0.5 and 1.0</li>
+                            <li>Even worse on Stack Overflow!</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section>
+                    <h1>2. CORS <br/><span class="fragment subhead">(Cross-Origin Really Sucks)</span></h1>
+                    <aside class="notes">
+                        <ul>
+                            <li>All our assets are requested through a sub-domain, including HTML imports</li>
+                            <li>We started seeing lots of CORS errors in the console</li>
+                            <li>Lots of testing, inc. blaming our CDN provider</li>
+                            <li>Days of investigation => Safari!!</li>
+                            <li>No same-origin policy for HTML (or fonts), so no Origin header, cached without CORS headers</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section>
+                    <h1>3. IE & "parser-challenged elements"</h1>
+                    <aside class="notes">
+                        <ul>
+                            <li>There are certain elements which IE removes any dissallowed children nodes</li>
+                            <li>The two main ones are select and table:</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section data-background="#eeeeee">
+                    <pre style="margin: 0; width: 100%;"><code class="html" data-trim>
+&lt;select&gt;
+  &lt;template is="dom-repeat" items="{{options}}"&gt;
+    &lt;option value="{{item.value}}"&gt;{{item.name}}&lt;/option&gt;
+  &lt;/template&gt;
+&lt;/select&gt;
+                    </code></pre>
+                    <aside class="notes">
+                        <ul>
+                            <li>IE refuses to accept anything insie a select that isnt an option.</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section data-background="#eeeeee">
+                    <pre style="margin: 0; width: 100%;"><code class="html" data-trim>
+&lt;template is="dom-repeat" items="{{options}}"&gt;
+  &lt;option value="{{item.value}}"&gt;{{item.name}}&lt;/option&gt;
+&lt;/template&gt;
+&lt;select&gt;&lt;/select&gt;
+                    </code></pre>
+                    <aside class="notes">
+                        <ul>
+                            <li>The result is that when you load the page the template gets moved to a sibling node</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <section data-background="#eeeeee">
+                    <pre style="margin: 0; width: 100%;"><code class="html" data-trim>
+&lt;select&gt;
+  &lt;option template repeat="{{item in options}}" value="{{item.value}}"&gt;&lt;/option&gt;
+&lt;/select&gt;
+                    </code></pre>
+                    <aside class="notes">
+                        <ul>
+                            <li>There is some nice syntactic sugar for this</li>
+                            <li>I tried this and had no success</li>
+                            <li>Alternative is to loop over data set and append elements with JS</li>
+                        </ul>
+                    </aside>
+                </section>
+
+                <!-- MATT END -->
+
+                <!-- ROBIN START -->
+
+                <!-- What's next -->
+                <section>
+                    <h1>what's next for us </h1>
+                    <aside class="notes">
+                        <ul>
+                            <li>Things we want to do</li>
+                            <li>Things we haven't done</li>
+                        </ul>
+                    </aside> 
+                </section>
+                <!-- What's next -->
+                <section>
+                    <p>conditionally polyfill</p>
+                    <aside class="notes">
+                        <ul>
+                            <li>Don't need to polyfill chrome</li>
+                            <li>polyfill needs to keep upwith browser technology, who is native</li>
+                            <li>Can use shadow dom over shadey on chrome, perf win!</li>
+                        </ul>
+                    </aside> 
+                </section>
+
+                <!-- What's next -->
+                <section>
+                    <p>performance monitoring</p>
+                    <aside class="notes">
+                        <ul>
+                            <li>Matt talked about does it work</li>
+                            <li>We want to know how well it is working
+                            <ul>
+                                <li>Time to render - RUM</li>
+                                <li>Asset download - RUM</li>
+                                <li>Memory useage in CI</li>
+                            </ul>
+                            </li>
+                        </ul>
+                    </aside> 
+                </section>
+
+                <!-- What's next -->
+                <section>
+                    <p>optimize build</p>
+                    <aside class="notes">
+                        <ul>
+                            <li>move each element into own repo - better version control</li>
+                        </ul>
+                    </aside> 
+                </section>
+
+            <!-- What's next -->
+              <section>
+                    <p>skeleton CSS / unresolved styles</p>
+                    <aside class="notes">
+                        <ul>
+                            <li>typically used for dynamic content
+                                <ul>
+                                    <li>big win for perceived performance</li>
+                                    <li>used by etsy, google, guardian etc...</li>
+                                </ul>
+                            </li>
+                            <li>styles before webcomponent is ready</li>
+                        </ul>
+                    </aside>           
+                </section>
+
+                <!-- What's next -->
+                <section>
+                    <p>progressive enhancement</p>
+                </section>
+
+                <section data-background="#e80042">
+                    <img src="/images/next/paul-lewis-polyer-loading.png" class="shadow" />
+                    <aside class="notes">
+                        <ul>
+                            <li>paul lewis slide from chrom dev summit (18/11/15)</li>
+                            <li>bootstrap</li>
+                            <li>async components</li>
+                            <li>html import only loaded once so it's a race to get polymer</li>
+                        </ul>
+                    </aside> 
+                </section>
+
+                <!-- What's next -->
+                <section>
+                    <p>expanding outside of the product page</p>
+                    <aside class="notes">
+                        <ul>
+                            <li>NAP live homepage</li>
+                            <li>Basket upsell</li>
+                            <li>Listing page</li>
+                        </ul>
+                    </aside>   
+                </section>
+
+                <!-- Resources -->
+                <section>
+                    <h1>resources</h1>
+                </section>
+
+                <section>
+                    <p>chrome dev summit</p>
+                    <ul class="list">
+                    <li><a href="https://www.youtube.com/watch?v=lck68wyVUo4">Polymer - State of the Union</a></li></br>
+                    <li><a href="https://www.youtube.com/watch?v=g7f1Az5fxgU">Building Progressive Web Apps with Polymer</a></li>
+                    <ul>
+                </section>
+
+                <section>
+                <p>useful links</p>
+                    <ul class="list">
+                        <li><a href="https://www.polymer-project.org/1.0/docs/devguide/feature-overview.html">Polymer docs</a></li></br>
+                        <li><a href="https://elements.polymer-project.org/">Elements catalog</a></li></br>
+                        <li><a href="https://polymer.slack.com/">Slack</a></li></br>
+    					<li><a href="https://www.youtube.com/watch?v=m1hFhDYDY6o&olst=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN">Polycasts YouTube</a></li></br>
+    					<li><a href="http://webcomponents.org/">webcomponents.org</a></li></br>
+                    <ul>
+                </section>
+                <section>
+                    <p>twitter</p>
+                    <ul class="list">
+                    <li><a href="https://twitter.com/polymer">@polymer</a></li></br>
+                    <li><a href="https://twitter.com/ebidel">@ebidel</a></li></br>
+                    <li><a href="https://twitter.com/rob_dodson">@rob_dodson</a></li></br>
+                    <li><a href="https://twitter.com/TaylorTheSavage">@TaylorTheSavage</a></li>
+                    </ul>
+                </section> 
+
+                <!-- ROBIN END -->
+
+                <!-- BRING DAVID BACK... -->
+
+                <!-- Shall we show it? -->
+                <section>
+                    <h1>let's see it</h1>
+                </section>
+
+                <section data-background="#e80042">
+                    <video controls style="width:100%" class="shadow">
+                      <source src="/videos/demo/demo-from-dev-summit.mp4" type="video/mp4">
+                    </video>
+                    <aside class="notes">
+                        <ul>
+                            <li>Stole from chrome dev summit</li>
+                            <li>Componets are dropped into page</li>
+                            <li>Different products use different components</li>
+                            <li>if you want us to show you come see us after</li>
+                        </ul>
+                    </aside>                       
+                </section>
+
+                <section>
+                    <h1>questions...</h1>
+                </section>
+
+                <section class="profile" data-background="#e80042">
+                    <div class="mugshot">
+                        <img src="/images/furniture/matt.jpeg">
+                        <h3>Matt Green</h3>
+                        <a class="handle" href="https://twitter.com/mjgreen145">@mjgreen145</a>
+                    </div>
+                    <div class="mugshot">
+                        <img src="/images/furniture/robin.jpeg">
+                        <h3>Robin Glen</h3>
+                        <a class="handle" href="https://twitter.com/arielwithlegs">@arielwithlegs</a>
+                    </div>
+                    <div class="mugshot">
+                        <img src="/images/furniture/dbod.png">
+                        <h3>David Boddy</h3>
+                        <a class="handle" href="https://twitter.com/threetwotwo">@threetwotwo</a>
+                    </div>
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

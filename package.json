@@ -1,0 +1,17 @@
+{
+  "name": "Polymer-in-production",
+  "version": "0.0.1",
+  "description": "Slide show for NAPs Polymer in production talk",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "~4.1.1"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "request": "^2.65.0",
+    "url": "^0.11.0"
+  },
+  "license": "MIT"
+}

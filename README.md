@@ -14,6 +14,8 @@ A fork of reveal JS, hacked and butchered to make a slideshow for Polymer In Pro
 
 `npm start`
 
+Navigate to localhost:8080
+
 ### Controls
 
 <- Previous | Next ->
